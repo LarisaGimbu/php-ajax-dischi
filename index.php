@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/db/database.php";
 
+
 ?>
 
 <!DOCTYPE html>
@@ -14,5 +15,14 @@ require_once __DIR__ . "/db/database.php";
 </head>
 <body>
   
+  <?php foreach($songs as $song): ?>
+  <div class="song-box">
+    <img :src="" alt="">
+    <h5>song.title</h5>
+    <p>song.author</p>
+    <p class="year">song.year</p>
+  </div> 
+  <?php endforeach ?>
+
 </body>
 </html>
