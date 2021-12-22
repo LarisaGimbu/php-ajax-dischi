@@ -3,6 +3,7 @@
 require_once __DIR__ . "/db/database.php";
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +18,10 @@ require_once __DIR__ . "/db/database.php";
   
   <?php foreach($songs as $song): ?>
   <div class="song-box">
-    <img :src="" alt="">
-    <h5>song.title</h5>
-    <p>song.author</p>
-    <p class="year">song.year</p>
+    <img src="<?php echo $song['poster'] ?>" alt="">
+    <h5> <?php echo $song['title'] ?></h5>
+    <p><?php echo $song['author'] ?></p>
+    <p class="year"><?php echo $song['year'] ?></p>
   </div> 
   <?php endforeach ?>
 
