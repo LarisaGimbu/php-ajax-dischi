@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: #2E3A46;
+}
+.fa-spotify{
+  font-size: 2rem;
+  color: #1ED760;
+  padding: 10px;
+}
+
+main{
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 48px);
+  background-color: #1E2D3B;
+}
+
+
+.song-box{
+  position: relative;
+  width: 100px;
+  min-height: 300px;
+  background-color: #2E3A46;;
+  color: white;
+  transition: all .5s;
+}
+.song-box:hover{
+  background-color: lighten(#2E3A46, 10%);
+  cursor: pointer;
+}
+.song-box:hover img{
+  scale: 105%;
+}
+.song-box:hover i{
+  display: block;
+  text-shadow: 0 3px 2px #2E3A46;
+}
+.song-box:hover p{
+  color: lighten(#808078, 30%);
+}
+
+img{
+  width: 80%;
+  object-fit: contain;
+}
+.my-play{
+  display: none;
+  position: absolute;
+  top: 23%;
+  left: 43%;
+  font-size: 2rem;
+  opacity: 0.8; 
+}
+.my-play:hover{
+  scale: 105%;
+}
+
+
+h5{
+  text-transform: uppercase;
+}
+p{
+  color: #808078;
+  font-size: 1.2rem;
+}
+p.year{
+  font-size: 0.9rem;
+}

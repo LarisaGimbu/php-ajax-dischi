@@ -5,11 +5,10 @@ const app = new Vue({
   },
   methods:{
     getApi(){
-      axios.get('./db/database.php')
-        .then( r =>{
-          this.songs = r.data.response;
-          console.log(r);
-          
+      axios.get('http://localhost/php-ajax-dischi/server.php')
+        .then( response =>{
+          this.songs = response.data;
+          console.log(this.songs);
 
         })
         .catch((error) =>{
@@ -19,7 +18,7 @@ const app = new Vue({
   },
   mounted(){
     this.getApi();
-    console.log(this.songs);
+    
 
   },
   computed:{
